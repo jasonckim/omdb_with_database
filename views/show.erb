@@ -1,0 +1,31 @@
+<h2>Movie Info:</h2>
+
+<%@movies.each do |results| %>
+	<strong>Movie Title:</strong> <%=results["title"]%><br />
+	<strong>Year:</strong> <%=results["year"]%><br />
+	<strong>Movie ID:</strong> <%=results["id"]%><br />
+<% end %>
+
+<br />
+
+<!-- 	<h2>Search by movie ID:</h1>
+	<form action="/idsearch" method="get">
+		<input id="idsearch" name="idsearch" type="text" placeholder="Search movie ID" />
+		<input name="commit" type="submit" value="Search"/>
+	 </form>
+	 <br />
+
+	 <h1> OR </h1>
+
+	<form action="/movies/new" method="get">
+		<button>Click here to add a new movie</button>
+	</form> -->
+
+<br />
+<br />
+
+<a href='/'><button>Back to Movie Seach</button></a>
+
+
+
+

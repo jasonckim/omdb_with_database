@@ -1,0 +1,22 @@
+<div class="search-form">
+	<h1>Welcome to the movie database!</h1>
+		<h2>Search by movie title:</h1>
+			<form action="/search" method="get">
+				<input id="movie" name="movie" type="text" placeholder="Search movie title" />
+				<input name="commit" type="submit" value="Search"/>
+	 		</form>
+</div>
+
+	<h2>Search by movie ID:</h1>
+		<form action="/idsearch" method="get">
+			<input id="idsearch" name="idsearch" type="text" placeholder="Search movie ID" />
+			<input name="commit" type="submit" value="Search"/>
+	 	</form>
+
+	 <br />
+
+	 <h1> OR </h1>
+
+	 <form action="/movies/new" method="get">
+		<button>Click here to add a new movie</button>
+	</form>

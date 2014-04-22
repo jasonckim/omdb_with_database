@@ -1,0 +1,33 @@
+
+body{
+	background-image: url("http://images2.alphacoders.com/141/141340.jpg");
+ 	background-repeat: 50% 50%;
+	background-size: cover;
+	color:white;
+	text-align: center;
+}
+
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:visited{
+	color:white;
+}
+
+a:hover {
+  color: yellow;
+  background-color: transparent;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.new{
+	margin-top: 200px;
+}
+
+.search{
+	margin-top: 175px;
+}

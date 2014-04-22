@@ -10,16 +10,34 @@ configure do
 end
 
 get '/' do
-  #Add code here
+  erb :index
 end
 
+get '/search' do
+  c= PGconn.new(:host => "localhost", :dbname => dbname)
+  @movies = c.exec_params("SELECT * FROM movies WHERE title = $1;", [params[:movie]])
+  c.close
+  erb :search
+end
 
-#Add code here
-
+get '/movie/:id' do
+  c= PGconn.new(:host => "localhost", :dbname => dbname)
+  @movies = c.exec_params("SELECT * FROM movies WHERE id = $1;", [params[:id]])
+  c.close
+  erb :show
+end
 
 get '/movies/new' do
-  erb :new_movie
+  erb :new
 end
+
+get '/idsearch' do
+  c= PGconn.new(:host => "localhost", :dbname => dbname)
+  @movies = c.exec_params("SELECT * FROM movies WHERE id = $1;", [params[:idsearch]])
+  c.close
+erb :idsearch
+end
+
 
 post '/movies' do
   c = PGconn.new(:host => "localhost", :dbname => dbname)
@@ -30,7 +48,7 @@ post '/movies' do
 end
 
 def dbname
-  "test.db"
+  "testdb"
 end
 
 def create_movies_table

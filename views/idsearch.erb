@@ -1,0 +1,14 @@
+<div class="idsearch">
+	<h1> Movie Info: </h1>
+	<% @movies.each do |movie| %>
+		<strong>Movie ID: <%=movie["id"]%></strong><br />
+		<strong>Movie Title: <%=movie["title"]%> </strong><br />
+		<strong>Year: <%=movie["year"]%> </strong> <br />
+	<%end%>
+
+<br />
+<br />
+
+	<a href='/'><button>Back to Movie Seach</button></a>
+
+</div>
